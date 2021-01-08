@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Application has two screens, Home and Calculations
+1. On Home Screen, User can set up Number of Calculations (NoC) and start solving calculations by clicking on Start button (see `Home.png`)
+1. After clicking on Start button, User is redirected to Calculations Screen where he will be presented with Grid of Arithmetic Calculation Components, Stopwatch with passed time information and current state of Finished Calculations (see `Calculations.png`)
+1. Calculation Components are generated dynamically based on number of operations, example values `3 + 9 =`, `7 - 5 =`, `2 * 9=` in case of NoC `3` (see Constraints below, minimum value 20, NoC `3` just as example)
+1. Calculation Components contains arithmetic calculation and input for entering result.
+1. User can submit result of calculation by entering value to result input field and pressing "Enter" key on keyboard to Submit. Calculation component will then change its background color based on the correctness of the result and counter of finished calculations is increased. Once submitted, User cannot change result he entered and have to move to the next Calculation.
+1. Once all Calculations are resolved, Stopwatch will be stopped presenting elapsed time Information highlighted
+1. User can Navigate back to Home Page to start again with different number of calculations.
+1. Any Extensions or Modifications are welcomed while preserving Core Functionality
 
-## Available Scripts
+---
+## Constraints
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Number of calculations in required, `20 <= NoC <= 60`
+- Calculations are in form of `n o m = r` where *n* and *m* are operands, Non-Negative Integers in range `1 <= n, m <= 10`, *o* is arithmetic operator and *r* is result
+- Calculations could be based on any of the following arithmetic operations: multiplication, addition or subtraction
+- Do not use floating point numbers for simplicity
